@@ -1,0 +1,18 @@
+# Exclude unnecessary fontawesome files
+fontawesome/less/
+fontawesome/scss/
+fontawesome/js/
+fontawesome/sprites/
+fontawesome/svgs/
+fontawesome/metadata/
+fontawesome/less/
+fontawesome/*.txt
+
+# Keep only necessary fontawesome CSS and webfonts
+!fontawesome/css/fontawesome.css
+!fontawesome/css/brands.css
+!fontawesome/css/solid.css
+!fontawesome/css/fontawesome.min.css
+!fontawesome/css/brands.min.css
+!fontawesome/css/solid.min.css
+!fontawesome/webfonts/
