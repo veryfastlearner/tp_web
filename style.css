@@ -1,18 +1,57 @@
+/* Fonts */
+@font-face {
+    font-family: 'Roboto';
+    src: url('fonts/roboto/Roboto-Regular.ttf') format('truetype');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('fonts/roboto/Roboto-Medium.ttf') format('truetype');
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('fonts/roboto/Roboto-Bold.ttf') format('truetype');
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('fonts/poppins/Poppins-Regular.ttf') format('truetype');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('fonts/poppins/Poppins-Medium.ttf') format('truetype');
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('fonts/poppins/Poppins-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('fonts/poppins/Poppins-Bold.ttf') format('truetype');
+    font-weight: 700;
+}
+
 /* page centree */
 #container{
     width:1200px;
     margin:auto;
-}
-
-/* [3] Fond : banner_bg.png, pas de repetition, haut droite, 68% largeur */
-#container{
     background-image: url('img/banner_bg.png');
     background-repeat: no-repeat;
     background-position: top right;
     background-size: 68%;
 }
 
-/* [Partie 1] Header : flex + espace entre + hauteur 45px */
+/* [Partie 1] Header */
 #container header{
     display:flex;
     justify-content: space-between;
@@ -21,69 +60,70 @@
 nav{
     display:flex;
     justify-content: space-between;
+    align-items: center;
+    width: 100%;
 }
 
-/* [Partie 1] Nav : flex sur ul + suppression des puces */
+/* [Partie 1] Nav */
 nav ul{
     display: flex;
     list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
-/* [Partie 1] Liens nav : couleur #0c2e60, 15px, padding 0 24px, roboto, hover orangered */
 nav a {
     text-decoration: none;
     color:#0c2e60;
     font-size: 15px;
     padding:0px 24px;
     font-family: 'Roboto', sans-serif;
+    transition: color 0.3s ease, transform 0.3s ease;
+    display: inline-block;
 }
 nav a:hover{
     color: orangered;
-}
-/* Align list items in a row */
-header nav ul {
-  display: flex;         /* Displays <li> items horizontally */
-  list-style: none;      /* Removes bullet points */
-  margin: 0;
-  padding: 0;
+    transform: scale(1.1);
 }
 
-/* Space out links using left and right padding */
-
-/* [Partie 2] Hero : flex, hauteur 850px */
+/* [Partie 2] Hero */
 #hero{
     display:flex;
     justify-content: space-between;
     align-items: center;
     height: 850px;
 }
-/* [Partie 2] Texte hero : largeur 45% */
-#hero_text{
+.hero_text{
     width: 45%;
 }
-/* [Partie 2] h5 : 14px, 500, #556172 */
+/* [Partie 2] h5 */
 #hero h5{
     font-size: 14px;
     font-weight: 500;
     color:#556172;
     font-family: 'Roboto', sans-serif;
 }
-/* [Partie 2] h1 : 55px, 700, #0c2e60 */
+/* [Partie 2] h1 */
 #hero h1{
     font-size: 55px;
     font-weight: 700;
     color:#0c2e60;
     font-family: 'Roboto', sans-serif;
 }
-/* [Partie 2] Paragraphe : 16px, line-height 1.8, #777777, marge interne 30px */
+/* [Partie 2] Paragraphe */
 #hero p{
     font-size: 16px;
     line-height: 1.8;
     color:#777777;
-    padding:30px;
+    padding:30px 0;
     font-family: 'Roboto', sans-serif;
 }
-/* [Partie 2] btn_1 : gradient, 200%, 14px, padding 15px 40px, radius 50px, 500 */
+/* Hero buttons container */
+.hero-btn{
+    display: flex;
+    gap: 14px;
+}
+/* [Partie 2] btn_1 */
 #hero .btn_1{
     background-image: linear-gradient(to right, #ee390f 0%, #f9b700 51%, #ee390f 100%);
     background-size: 200%;
@@ -91,30 +131,36 @@ header nav ul {
     padding: 15px 40px;
     border-radius: 50px;
     font-weight: 500;
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+    font-family: 'Roboto', sans-serif;
+    transition: font-size 0.3s ease;
 }
-/* [Partie 2] btn_2 : 200%, 14px, padding 15px 40px, radius 50px, 500, margin-left 14px, border 1px #0c2e60 */
+/* [Partie 2] btn_2 */
 #hero .btn_2{
     background-size: 200%;
     font-size: 14px;
     padding: 15px 40px;
     border-radius: 50px;
     font-weight: 500;
-    margin-left: 14px;
     border: 1px solid #0c2e60;
+    color: #0c2e60;
+    text-decoration: none;
+    display: inline-block;
+    font-family: 'Roboto', sans-serif;
+    transition: font-size 0.3s ease;
 }
-/* [Partie 2] Hover boutons : police 16px */
+/* [Partie 2] Hover boutons */
 #hero .btn_1:hover, #hero .btn_2:hover{
     font-size: 16px;
 }
-/* [Partie 2] Image : position relative + largeur 100% */
-.learning_img{
-    position: relative;
-}
-.learning_img img{
+/* [Partie 2] Image */
+.hero_img img{
     width: 100%;
 }
 
-/* [Partie 3] member_section : flex, hauteur 400px, fond couleur btn_1 */
+/* [Partie 3] member_section */
 .member_section{
     display:flex;
     justify-content: center;
@@ -122,60 +168,421 @@ header nav ul {
     height: 400px;
     background: linear-gradient(to right, #ee390f 0%, #f9b700 51%, #ee390f 100%);
 }
-/* [Partie 3] span.counter : 50px, 600, blanc, Poppins */
+.member{
+    width: 100%;
+}
+.member_counter{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.single_member_counter{
+    text-align: center;
+}
+/* [Partie 3] span.counter */
 .member_section .counter{
     font-size: 50px;
     font-weight: 600;
     color: #ffffff;
     font-family: "Poppins", sans-serif;
 }
-/* [Partie 3] h4 : 26px, 600, blanc, Poppins */
+/* [Partie 3] h4 */
 .member_section h4{
     font-size: 26px;
     font-weight: 600;
     color: #ffffff;
     font-family: "Poppins", sans-serif;
+    margin: 10px 0;
+}
+.counter_icon{
+    color: white;
+    font-size: 30px;
+    margin: 10px 0;
 }
 
-/* [Partie 4] learning_part : flex, hauteur 780px */
+/* [Partie 4] learning_part */
 .learning_part{
     display:flex;
     justify-content: space-between;
     align-items: center;
     height: 780px;
+    gap: 40px;
 }
-/* [Partie 4] Partie texte : largeur 50% */
+/* [Partie 4] Partie texte */
 .learning_member_text{
     width: 50%;
 }
-/* [Partie 4] h5 : #556172, 14px, 500, majuscule */
+/* [Partie 4] h5 */
 .learning_part h5{
     color: #556172;
     font-size: 14px;
     font-weight: 500;
     text-transform: uppercase;
+    font-family: 'Roboto', sans-serif;
 }
-/* [Partie 4] h2 : #0c2e60, 42px, 600, line-height 1.1 */
+/* [Partie 4] h2 */
 .learning_part h2{
     color: #0c2e60;
     font-size: 42px;
     font-weight: 600;
     line-height: 1.1;
+    font-family: 'Roboto', sans-serif;
 }
-/* [Partie 4] p : #888888, line-height 1.9, texte justifie */
+/* [Partie 4] p */
 .learning_part p{
     color: #888888;
     line-height: 1.9;
     text-align: justify;
+    font-family: 'Roboto', sans-serif;
 }
-/* [Partie 4] h4 : #0c2e60, 20px, 600 */
+/* [Partie 4] h4 */
 .learning_part h4{
     color: #0c2e60;
     font-size: 20px;
     font-weight: 600;
+    font-family: 'Roboto', sans-serif;
 }
-/* [Partie 4] Icones : #ff663b, 20px */
+/* [Partie 4] Icones */
 .learning_part .learning_icon{
     color: #ff663b;
     font-size: 20px;
+    margin-right: 10px;
 }
+.learning_img{
+    width: 50%;
+}
+.learning_img img{
+    width: 100%;
+}
+.row{
+    display: flex;
+    gap: 20px;
+}
+.learning_member_text_iner{
+    flex: 1;
+}
+
+/* [Partie 5] Courses */
+.special_course{
+    padding: 60px 0;
+}
+.section_tittle{
+    text-align: center;
+}
+.section_tittle p{
+    color: #556172;
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-family: 'Roboto', sans-serif;
+}
+.section_tittle h2{
+    color: #0c2e60;
+    font-size: 42px;
+    font-weight: 700;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+}
+.tiltle_icon{
+    color: #ff663b;
+    font-size: 32px;
+}
+.special_course_details{
+    display: flex;
+    gap: 30px;
+    margin-top: 40px;
+}
+.single_special_course{
+    flex: 1;
+    border: 1px solid #edeff2;
+}
+.special_img{
+    width: 100%;
+}
+.special_course_text{
+    padding: 20px;
+}
+.btn_4{
+    color: #ff663b;
+    padding: 3.5px 15px;
+    text-decoration: none;
+    border: 1px solid #ff663b;
+    display: inline-block;
+    font-family: 'Roboto', sans-serif;
+}
+.special_course_text h4{
+    color: #ff663b;
+    font-weight: 600;
+    font-size: 18px;
+    float: right;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+.special_course_text h3{
+    color: #0c2e60;
+    font-weight: 600;
+    font-size: 20px;
+    font-family: "Poppins", sans-serif;
+    clear: both;
+    padding-top: 10px;
+}
+.special_course_text p{
+    color: #666666;
+    font-weight: 600;
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+}
+.author_info{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+.author_img img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+.author_info_text{
+    flex: 1;
+}
+.author_info_text p{
+    margin: 0;
+    color: #666666;
+    font-size: 12px;
+}
+.author_info_text h5{
+    margin: 0;
+    color: #0c2e60;
+    font-family: 'Roboto', sans-serif;
+}
+.author_rating .rating{
+    display: flex;
+}
+.author_rating .rating img{
+    width: 15px;
+}
+.author_rating p{
+    margin: 5px 0 0 0;
+    font-size: 12px;
+}
+
+/* Animation for courses */
+@keyframes slideUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.single_special_course {
+    animation: slideUp 0.6s ease-in;
+}
+
+/* [Partie 6] Footer */
+footer{
+    background-color: #f7f7f7;
+    padding-top: 60px;
+}
+.footer-area{
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    padding: 0 20px;
+}
+.single-footer-widget{
+    flex: 1;
+    max-width: 350px;
+}
+.footer_1 p{
+    color: #666666;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.8;
+}
+.social_icon{
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+.social_icon a{
+    color: #0c2e60;
+    font-size: 18px;
+}
+.social_icon a:hover{
+    color: #ff663b;
+}
+.footer_2 h4, .single-footer-widget h4{
+    color: #0c2e60;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+.footer_2 p{
+    color: #666666;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.8;
+}
+.form-group .input-group{
+    display: flex;
+}
+.form-control{
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    font-family: 'Roboto', sans-serif;
+}
+.input-group-append .btn_1{
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+.contact_info p{
+    color: #666666;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.8;
+}
+.contact_info span{
+    color: #0c2e60;
+    font-weight: 500;
+}
+.copyright_part_text{
+    text-align: center;
+    padding: 30px 0;
+    border-top: 1px solid #e0e0e0;
+    margin-top: 40px;
+}
+.copyright_part_text p{
+    color: #666666;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+}
+
+/* Media queries */
+@media screen and (min-width: 576px) and (max-width: 1200px) {
+    #container{
+        width: 100%;
+        padding: 0 20px;
+    }
+    #hero{
+        height: auto;
+        flex-direction: column;
+        padding: 40px 0;
+    }
+    .hero_text{
+        width: 100%;
+    }
+    .hero_img{
+        width: 100%;
+        margin-top: 30px;
+    }
+    .member_counter{
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+    .learning_part{
+        height: auto;
+        flex-direction: column;
+        padding: 40px 0;
+    }
+    .learning_img, .learning_member_text{
+        width: 100%;
+    }
+    .special_course_details{
+        flex-direction: column;
+    }
+    .footer-area{
+        flex-direction: column;
+    }
+    .single-footer-widget{
+        max-width: 100%;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    #container{
+        width: 100%;
+        padding: 0 10px;
+    }
+    nav{
+        flex-direction: column;
+    }
+    nav ul{
+        flex-direction: column;
+        width: 100%;
+    }
+    nav ul li{
+        padding: 10px 0;
+    }
+    nav a{
+        padding: 0;
+    }
+    #hero{
+        height: auto;
+        flex-direction: column;
+        padding: 40px 0;
+    }
+    .hero_text{
+        width: 100%;
+    }
+    .hero_text h1{
+        font-size: 35px;
+    }
+    .hero_img{
+        width: 100%;
+        margin-top: 30px;
+    }
+    .hero-btn{
+        flex-direction: column;
+    }
+    .member_section{
+        height: auto;
+        padding: 40px 0;
+    }
+    .member_counter{
+        flex-direction: column;
+        gap: 30px;
+    }
+    .learning_part{
+        height: auto;
+        flex-direction: column;
+        padding: 40px 0;
+    }
+    .learning_img, .learning_member_text{
+        width: 100%;
+    }
+    .learning_part h2{
+        font-size: 32px;
+    }
+    .row{
+        flex-direction: column;
+    }
+    .special_course_details{
+        flex-direction: column;
+    }
+    .section_tittle h2{
+        font-size: 32px;
+    }
+    .footer-area{
+        flex-direction: column;
+    }
+    .single-footer-widget{
+        max-width: 100%;
+    }
+}  
+/* Contact form */  
+.contact_section{padding: 60px 0; max-width: 800px; margin: 0 auto;}  
+.contact_intro h1{color: #0c2e60; font-family: 'Roboto', sans-serif; font-size: 36px;}  
+.contact_intro p{color: #666666; font-family: 'Roboto', sans-serif; line-height: 1.8;}  
+.form_row{margin-bottom: 20px;}  
+.form_row label{display: block; color: #0c2e60; font-family: 'Roboto', sans-serif; margin-bottom: 5px; font-weight: 500;}  
+.form_row input[type="text"],.form_row input[type="email"],.form_row input[type="tel"],.form_row input[type="date"],.form_row select,.form_row textarea{width: 100%%; padding: 10px; border: 1px solid #ddd; font-family: 'Roboto', sans-serif; box-sizing: border-box;}  
+.radio_group{display: flex; gap: 20px; flex-wrap: wrap;}  
+.radio_group label{display: flex; align-items: center; gap: 5px; font-weight: 400;}  
+.checkbox_row label{display: flex; align-items: center; gap: 5px; font-weight: 400;}  
+.btn_submit{background-image: linear-gradient(to right, #ee390f 0%%, #f9b700 51%%, #ee390f 100%%); background-size: 200%%; color: white; padding: 12px 30px; border: none; border-radius: 50px; cursor: pointer; font-family: 'Roboto', sans-serif; font-size: 14px;}  
+.btn_submit:hover{opacity: 0.9;}  
+.error_msg{color: red; font-size: 13px; font-family: 'Roboto', sans-serif; margin-top: 5px;}  

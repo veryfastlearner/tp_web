@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link href="fontawesome/css/fontawesome.css" rel="stylesheet" />
+    <link href="fontawesome/css/brands.css" rel="stylesheet" />
+    <link href="fontawesome/css/solid.css" rel="stylesheet" />
+    <link href="style.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div id="container">
+        <header>
+            <nav>
+                <div id="logo">
+                    <a href="index.html"> <img src="img/logo.png" alt="logo1"> </a>
+                </div>
+                <ul>
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="about.html">About</a>
+                    </li>
+                    <li>
+                        <a href="courses.html">Courses</a>
+                    </li>
+                    <li>
+                        <a href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <section class="contact_section">
+            <div class="contact_intro">
+                <h1>Inscription au cours / Contactez-nous</h1>
+                <p>Remplissez ce formulaire pour vous inscrire à nos cours ou pour nous poser toute question. Nous vous répondrons dans les plus brefs délais.</p>
+            </div>
+
+            <form id="contactForm" novalidate>
+                <div class="form_row">
+                    <label for="fullname">Nom complet *</label>
+                    <input type="text" id="fullname" name="fullname">
+                    <div class="error_msg" id="error_fullname"></div>
+                </div>
+
+                <div class="form_row">
+                    <label for="email">Adresse email *</label>
+                    <input type="email" id="email" name="email">
+                    <div class="error_msg" id="error_email"></div>
+                </div>
+
+                <div class="form_row">
+                    <label for="phone">Téléphone</label>
+                    <input type="tel" id="phone" name="phone">
+                    <div class="error_msg" id="error_phone"></div>
+                </div>
+
+                <div class="form_row">
+                    <label for="course">Cours souhaité *</label>
+                    <select id="course" name="course">
+                        <option value="">-- Sélectionner --</option>
+                        <option value="HTML/CSS">HTML/CSS</option>
+                        <option value="JavaScript">JavaScript</option>
+                        <option value="Python">Python</option>
+                        <option value="Data Science">Data Science</option>
+                    </select>
+                    <div class="error_msg" id="error_course"></div>
+                </div>
+
+                <div class="form_row">
+                    <label for="startdate">Date de début souhaitée</label>
+                    <input type="date" id="startdate" name="startdate">
+                    <div class="error_msg" id="error_startdate"></div>
+                </div>
+
+                <div class="form_row">
+                    <label>Niveau *</label>
+                    <div class="radio_group">
+                        <label><input type="radio" name="level" value="Débutant"> Débutant</label>
+                        <label><input type="radio" name="level" value="Intermédiaire"> Intermédiaire</label>
+                        <label><input type="radio" name="level" value="Avancé"> Avancé</label>
+                    </div>
+                    <div class="error_msg" id="error_level"></div>
+                </div>
+
+                <div class="form_row">
+                    <label for="message">Message libre</label>
+                    <textarea id="message" name="message" rows="5"></textarea>
+                    <div class="error_msg" id="error_message"></div>
+                </div>
+
+                <div class="form_row checkbox_row">
+                    <label><input type="checkbox" id="newsletter" name="newsletter"> S'abonner à la newsletter</label>
+                </div>
+
+                <button type="submit" class="btn_submit">Envoyer la demande</button>
+            </form>
+
+            <div id="formResult" class="form_result"></div>
+        </section>
+
+        <footer>
+            <div class="footer-area">
+                <div class="single-footer-widget footer_1">
+                    <a href="index.html"> <img src="img/logo.png" alt=""> </a>
+                    <p>Education is the transmission of knowledge, skills, and character traits and manifests in various forms.</p>
+                    <div class="social_icon">
+                        <a href="#"> <i class="fa-brands fa-facebook"></i> </a>
+                        <a href="#"> <i class="fa-brands fa-x-twitter"></i> </a>
+                        <a href="#"> <i class="fa-brands fa-instagram"></i> </a>
+                        <a href="#"> <i class="fa-brands fa-skype"></i> </a>
+                    </div>
+                </div>
+
+                <div class="single-footer-widget footer_2">
+                    <h4>Newsletter</h4>
+                    <p>Stay updated with our latest trends This biweekly newsletter covers the latest in education funding, venture deals, mergers, acquisitions.
+                    </p>
+                    <form action="#">
+                        <div class="form-group">
+                            <div class="input-group ">
+                                <input type="text" class="form-control" placeholder='Enter email address'
+                                    onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter email address'">
+                                <div class="input-group-append">
+                                    <button class="btn btn_1" type="button"><i class="fa-solid fa-angle-right"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="single-footer-widget">
+                    <h4>Contact us</h4>
+                    <div class="contact_info">
+                        <p><span> Address :</span> 255 Capitol Street Salem,OR 97310-0203. USA. </p>
+                        <p><span> Phone :</span> +2 71 372 (8060)</p>
+                        <p><span> Email : </span>info@color.com </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="copyright_part_text">
+                <p>Copyright &copy; 2024 All rights reserved</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
